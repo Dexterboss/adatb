@@ -15,8 +15,8 @@ else
     echo"Csatlakozás megtörtént";
 }
 
-$sql = "Select * from emberek";
-$eredmeny=$conn->($sgl);
+$sql = "Select id, vezetknev, keresztnev FROM emberek";
+$eredmeny=$conn->query($sql);
 if ($eredmeny->num_rows > 0)
 {
     while($row = $eredmeny->fetch_assoc())
